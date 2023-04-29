@@ -16,6 +16,7 @@ import java.util.List;
  */
 
 public interface IBookController {
+    
     @PostMapping
     ResponseEntity<Book> createBook(@RequestBody Book book);
 

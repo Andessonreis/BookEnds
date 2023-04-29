@@ -17,6 +17,7 @@ import org.springframework.stereotype.Service;
  *
  * @author Andesson reis
  */
+
 //-----Application Business Rules-----//    
 @Service
 public class BookService implements IBookService {
@@ -48,8 +49,5 @@ public class BookService implements IBookService {
     public void deleteBook(Long bookId) {
         bookRepository.deleteById(bookId);
     }
-
-    // other methods as n
-    
 }
 

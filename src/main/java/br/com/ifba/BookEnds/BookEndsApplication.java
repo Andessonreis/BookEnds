@@ -7,6 +7,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext
         ;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 //
@@ -17,9 +18,10 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 //@ComponentScan(basePackages = "br.com.ifba.library")
 //@EnableJpaRepositories("br.com.ifba.library.model")
 @SpringBootApplication
-@ComponentScan(basePackages = "br.com.ifba.library")
-@EnableJpaRepositories("br.com.ifba.library.model")
-@EntityScan("br.com.ifba.library.model") 
+@Configuration
+//@ComponentScan(basePackages = "br.com.ifba.library")
+//@EnableJpaRepositories("br.com.ifba.library.model")
+//@EntityScan("br.com.ifba.library.model") 
 public class BookEndsApplication {
 
 	public static void main(String[] args) {

@@ -13,8 +13,10 @@ import java.util.List;
  */
 
 public interface IBookService {
+    
     List<Book> getAllBooks();
     Book findById(Long bookId);
     Book saveBook(Book book);
     void deleteBook(Long bookId);
+    
 }
