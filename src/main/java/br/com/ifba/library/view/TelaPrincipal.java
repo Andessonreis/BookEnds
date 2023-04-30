@@ -4,6 +4,8 @@
  */
 package br.com.ifba.library.view;
 
+import br.com.ifba.BookEnds.BookEndsApplication;
+import br.com.ifba.library.model.Book;
 import br.com.ifba.library.model.BookRepository;
 
 import java.awt.Color;
@@ -16,6 +18,8 @@ import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.SpringApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.stereotype.Component;
 
 /**
@@ -27,15 +31,18 @@ import org.springframework.stereotype.Component;
 @Component
 public class TelaPrincipal extends javax.swing.JFrame {
     
-    @Autowired
-    private BookRepository bookRepository;
+    private final BookRepository bookRepository;
     private int row;
     /**
      * Creates new form TelaPrincipal
+     *
+     * @param bookRepository
      */ 
-    public TelaPrincipal() {
+    @Autowired
+    public TelaPrincipal(BookRepository bookRepository) {
+        this.bookRepository = bookRepository;
         initComponents();
-        //adcionarTela();
+        adcionarTela();
     }
     
 
@@ -187,13 +194,13 @@ class JpaneGradient extends JPanel {
     }
 }
      //Adiciona os dados do banco de dados a tela
-//private void adcionarTela(){
-//    for(Book book: dao.findAll()) {
-//        Object [] books = {book.getTitle(), book.getAuthor(), book.getPublicationYear(), book.getId()};
-//        DefaultTableModel dtmBooks = (DefaultTableModel) TelaPrincipal.this.getJtTabela().getModel();
-//        dtmBooks.addRow(books);
-//     }
-// }
+private void adcionarTela(){
+    for(Book book: bookRepository.findAll()) {
+        Object [] books = {book.getTitle(), book.getAuthor(), book.getPublicationYear(), book.getId()};
+        DefaultTableModel dtmBooks = (DefaultTableModel) TelaPrincipal.this.getJtTabela().getModel();
+        dtmBooks.addRow(books);
+     }
+ }
    
     private void jBADDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBADDActionPerformed
         // TODO add your handling code here:
@@ -271,10 +278,15 @@ class JpaneGradient extends JPanel {
         //</editor-fold>
 
         /* Create and display the form */
-           java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                  new TelaPrincipal().setVisible(true);           }
-         });
+//           java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                  new TelaPrincipal().setVisible(true);     
+//            }
+//         });
+
+            ConfigurableApplicationContext context = SpringApplication.run(BookEndsApplication.class, args);
+            TelaPrincipal telaPrincipal = context.getBean(TelaPrincipal.class);
+            telaPrincipal.setVisible(true);
         
     }
 

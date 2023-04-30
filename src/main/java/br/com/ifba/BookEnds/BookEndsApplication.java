@@ -4,8 +4,7 @@ import br.com.ifba.library.view.TelaPrincipal;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.context.ConfigurableApplicationContext
-        ;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
@@ -16,6 +15,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 //@ComponentScan(basePackages = {"br.com.ifba.library.model", "br.com.ifba.library.view"})
 //@SpringBootApplication
 //@ComponentScan(basePackages = "br.com.ifba.library")
+//@ComponentScan(basePackages = {"br.com.ifba.library.model", "br.com.ifba.library.view"})
 //@EnableJpaRepositories("br.com.ifba.library.model")
 @SpringBootApplication
 @Configuration
