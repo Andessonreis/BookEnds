@@ -22,7 +22,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 //@ComponentScan(basePackages = "br.com.ifba.library")
 //@EnableJpaRepositories("br.com.ifba.library.model")
 //@EntityScan("br.com.ifba.library.model") 
-public class BookEndsApplication {
+public class BookEndsApplication { 
 
 	public static void main(String[] args) {
                 ConfigurableApplicationContext context = 
