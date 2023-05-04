@@ -30,19 +30,19 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class TelaPrincipal extends javax.swing.JFrame {
-    
-    private final BookRepository bookRepository;
+        
+    @Autowired
+    private BookRepository bookRepository;
     private int row;
+    
     /**
      * Creates new form TelaPrincipal
      *
-     * @param bookRepository
-     */ 
-    @Autowired
-    public TelaPrincipal(BookRepository bookRepository) {
-        this.bookRepository = bookRepository;
+     */
+
+    public TelaPrincipal() {
         initComponents();
-        adcionarTela();
+       // adcionarTela();
     }
     
 
@@ -180,8 +180,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
    //Gradient color
 class JpaneGradient extends JPanel {
+    
     @Override
     protected void paintComponent(Graphics g) {
+        
         Graphics2D g2d = (Graphics2D) g;
         int width = getWidth();
         int height = getHeight();
@@ -278,15 +280,13 @@ private void adcionarTela(){
         //</editor-fold>
 
         /* Create and display the form */
-//           java.awt.EventQueue.invokeLater(new Runnable() {
-//            public void run() {
-//                  new TelaPrincipal().setVisible(true);     
-//            }
-//         });
+           java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                  new TelaPrincipal().setVisible(true);     
+            }
+         });
 
-            ConfigurableApplicationContext context = SpringApplication.run(BookEndsApplication.class, args);
-            TelaPrincipal telaPrincipal = context.getBean(TelaPrincipal.class);
-            telaPrincipal.setVisible(true);
+    
         
     }
 
