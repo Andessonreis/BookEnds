@@ -2,11 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package br.com.ifba.library.view;
+package br.com.ifba.view;
 
 import br.com.ifba.BookEnds.BookEndsApplication;
-import br.com.ifba.library.model.Book;
-import br.com.ifba.library.model.BookRepository;
+import br.com.ifba.model.Book;
+import br.com.ifba.model.BookRepository;
 
 import java.awt.Color;
 import java.awt.GradientPaint;

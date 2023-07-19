@@ -2,11 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package br.com.ifba.library.facade;
+package br.com.ifba.facade;
 
 
-import br.com.ifba.library.model.Book;
-import br.com.ifba.library.service.BookService;
+import br.com.ifba.model.Book;
+import br.com.ifba.service.BookService;
 
 import java.util.List;
 

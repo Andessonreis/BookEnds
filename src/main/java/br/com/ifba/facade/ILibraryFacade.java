@@ -2,8 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
  */
-package br.com.ifba.library.service;
-import br.com.ifba.library.model.Book;
+package br.com.ifba.facade;
+
+import br.com.ifba.model.Book;
 
 import java.util.List;
 
@@ -12,11 +13,11 @@ import java.util.List;
  * @author Andesson reis
  */
 
-public interface IBookService {
+public interface ILibraryFacade {
     
-    List<Book> getAllBooks();
-    Book findById(Long bookId);
+    List<Book> findAllBooks();
+    Book findBookById(Long id);
     Book saveBook(Book book);
-    void deleteBook(Long bookId);
-    
+    void deleteBook(Long id);
+
 }

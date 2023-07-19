@@ -2,10 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package br.com.ifba.library.bookController;
+package br.com.ifba.controller;
 
-import br.com.ifba.library.model.Book;
-import br.com.ifba.library.model.BookRepository;
+import br.com.ifba.model.Book;
+import br.com.ifba.model.BookRepository;
 
 import java.util.List;
 import java.util.Optional;
