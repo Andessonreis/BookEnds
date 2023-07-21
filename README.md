@@ -1,4 +1,4 @@
-# Project-spring-BookEnds
+# Project-Spring-BookEnds
 
 Este é um projeto desenvolvido como parte de um trabalho da faculdade no IFBA. O objetivo do projeto é criar uma aplicação de gerenciamento de livros usando Java Spring Boot.
 Funcionalidades
